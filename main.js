@@ -9,7 +9,7 @@ searchButton.addEventListener("click",function(){
 });
 
 function getWeather(city) {
-  const urlCurrent = `http://api.weatherapi.com/v1/current.json?key=563bbe88b0a6427c8fb100901231909&q=${city}`;
+  const urlCurrent = `https://api.weatherapi.com/v1/current.json?key=563bbe88b0a6427c8fb100901231909&q=${city}`;
 
   fetch (urlCurrent).then (response=>{
     if(!response.ok) {
@@ -47,7 +47,7 @@ function getWeather(city) {
 
 
 function getWeatherForecast(city){
-  const urlForecast =`http://api.weatherapi.com/v1/forecast.json?key=563bbe88b0a6427c8fb100901231909&q=${city}&days=7`;
+  const urlForecast =`https://api.weatherapi.com/v1/forecast.json?key=563bbe88b0a6427c8fb100901231909&q=${city}&days=7`;
   dailyForcastContainer.innerHTML="";
   fetch(urlForecast)
   .then (response=>{
